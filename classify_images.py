@@ -80,12 +80,15 @@ classification_output_file = r'classification_output.csv'
 #
 # Set to None to disable latin --> common mapping
 #
-# If a URL, will be automatically downloaded to a temp folder.
+# Use if no list is downloaded before
+# taxonomy_path = 'https://lilablobssc.blob.core.windows.net/models/species_classification/species_classification.2019.12.00.taxa.csv'
 taxonomy_path = '../species_classification.2019.12.00.taxa.csv'
+
 
 # Path to our classification model file.
 #
-# If a URL, will be automatically downloaded to a temp folder.
+# Use if no model is downloaded before
+# classification_model_path = 'https://lilablobssc.blob.core.windows.net/models/species_classification/species_classification.2019.12.00.pytorch'
 classification_model_path = '../species_classification.2019.12.00.pytorch'
 
 # Detection (i.e., bounding box generation) is optional; set to None 
@@ -109,6 +112,7 @@ use_gpu = False
 #
 image_sizes = [560, 560]
 
+# number of predictions to return
 mak_k_to_print = 5
 debug_max_images = -1
 
