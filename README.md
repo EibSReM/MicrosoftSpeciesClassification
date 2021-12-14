@@ -26,7 +26,7 @@ and change to respective directory
 
 5. Download taxonomy file mentioned [here](https://github.com/microsoft/SpeciesClassification)
 
-6. Adapt path to pytorch model, taxonomy file and images (folder) in the `classify_images.py` script (if you don't want to download the model and taxonomy files beforehand the script can do it for you, if you change the paths to the given hyperlinks)
+6. Adapt api_root, path to pytorch model, taxonomy file and images (folder) in the `classify_images.py` script (if you don't want to download the model and taxonomy files beforehand the script can do it for you, if you change the paths to the given hyperlinks)
 
 7. Run script 
 ```
