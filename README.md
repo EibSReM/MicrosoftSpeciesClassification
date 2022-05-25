@@ -22,16 +22,18 @@ git clone https://github.com/EibSReM/MicrosoftSpeciesClassification.git
 ``` 
 and change to respective directory
 
-4. Download pretrained pytorch model mentioned [here](https://github.com/microsoft/SpeciesClassification). This is not mandatory since the script also offers the opportunity to download the model if you change the path to the respective hyperlink (included in the script but commented out).
+4. Download pretrained pytorch model mentioned [here](https://github.com/microsoft/SpeciesClassification) (409 MB). This is not mandatory since the script also offers the opportunity to download the model if you change the path to the respective hyperlink (included in the script but commented out).
 
 5. Download taxonomy file mentioned [here](https://github.com/microsoft/SpeciesClassification)
 
-6. Adapt api_root, path to pytorch model, taxonomy file and images (folder) in the `classify_images.py` script (if you don't want to download the model and taxonomy files beforehand the script can do it for you, if you change the paths to the given hyperlinks)
+6. Adapt api_root in the `classify_images.py` script. It should be the path to the cloned repository.
 
-7. Run script 
+7. Adapt the paths to the pytorch model, the taxonomy file and the images (folder) in the `classify_images.py` script (if you don't want to download the model and taxonomy files beforehand the script can do it for you, if you change the paths to the given hyperlinks)
+
+8. Run script 
 ```
 python classify_images.py
 ```
 
-8. Find results in `classification_output.csv`
+9. Find results in `classification_output.csv`
 
