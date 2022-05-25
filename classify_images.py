@@ -38,12 +38,14 @@ import pandas as pd
 import glob
 import urllib
 import tempfile
+import time
 
 # pip install progressbar2, not progressbar
 import progressbar
 
 # Species classification modules will be imported later
 
+start = time.time()
 
 #%% Options
 
@@ -51,7 +53,8 @@ import progressbar
 # little path management.  This also implicitly defers PyTorch imports.
 
 # Directory to which you sync'd this repo.
-api_root = r'C:\Users\janst\Documents\Arbeit\JRC\data\Microsoft\SpeciesClassification-master\SpeciesClassification-master'
+# TODO: set path to repository
+api_root = r'../MicrosoftSpeciesClassification/'
 
 # If not None, pre-pended to filenames.  Most useful when filenames are coming from 
 # a .csv file.
@@ -70,7 +73,7 @@ images_to_classify_base = None
 # images_to_classify = [r'data/species-classification/images/sample_images/acridotheres_tristis_01.jpg']
 # images_to_classify = 'image_list.csv'
 # TODO: set path to images folder
-images_to_classify = r'path/to/images'
+images_to_classify = r'../images/microsoft/general/'
 
 # Classification results will be written here
 classification_output_file = r'classification_output.csv'
@@ -81,15 +84,17 @@ classification_output_file = r'classification_output.csv'
 # Set to None to disable latin --> common mapping
 #
 # Use if no list is downloaded before
-# taxonomy_path = 'https://lilablobssc.blob.core.windows.net/models/species_classification/species_classification.2019.12.00.taxa.csv'
-taxonomy_path = '../species_classification.2019.12.00.taxa.csv'
+# TODO: Change taxonomy path if downloaded manually
+taxonomy_path = 'https://lilablobssc.blob.core.windows.net/models/species_classification/species_classification.2019.12.00.taxa.csv'
+# taxonomy_path = '../species_classification.2019.12.00.taxa.csv'
 
 
 # Path to our classification model file.
 #
 # Use if no model is downloaded before
-# classification_model_path = 'https://lilablobssc.blob.core.windows.net/models/species_classification/species_classification.2019.12.00.pytorch'
-classification_model_path = '../species_classification.2019.12.00.pytorch'
+# TODO: Change model path if downloaded manually
+classification_model_path = 'https://lilablobssc.blob.core.windows.net/models/species_classification/species_classification.2019.12.00.pytorch'
+# classification_model_path = '../species_classification.2019.12.00.pytorch'
 
 # Detection (i.e., bounding box generation) is optional; set to None 
 # to disable detection
@@ -368,3 +373,6 @@ if classification_output_file is not None:
     f.close()
     
 print('Finished classifying {} of {} images ({} errors)'.format(n_images_classified,n_images,n_errors))
+end = time.time()
+runtime = end - start
+print("total runtime: " + str(runtime))
