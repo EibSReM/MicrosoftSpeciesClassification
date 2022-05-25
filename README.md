@@ -4,7 +4,8 @@ Script to classify images of plants and animals with the image-based species rec
 
 ## How-To
 
-1. Install conda / miniconda if you do not have already (see [here for installation](https://docs.conda.io/en/latest/miniconda.html) of miniconda and [here](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf) for a conda cheatsheet.
+1. Install conda / miniconda if you do not have already (see [here for installation](https://docs.conda.io/en/latest/miniconda.html) of miniconda and [here](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf) for a conda cheatsheet).
+
 2. Create a conda environment from the `environment.yml` file by executing
 ```
 conda env create -f environment.yml
@@ -31,3 +32,8 @@ python classify_images.py
 
 9. Find results in `classification_output.csv`
 
+
+## Runtime
+Classifying 204 images, the script run 2175 seconds (~ 36 minutes) on a Windows 10 notebook with the following hardware specifications:
+* Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz   1.99 GHz
+* 20 GB Ram
