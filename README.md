@@ -32,8 +32,10 @@ python classify_images.py
 
 9. Find results in `classification_output.csv`
 
-
 ## Runtime
 Classifying 204 images, the script run 2175 seconds (~ 36 minutes) on a Windows 10 notebook with the following hardware specifications:
 * Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz   1.99 GHz
 * 20 GB Ram
+
+## Approach Demo 
+In the folder [demo](/demo/) you can find a couple of images and a README with the expected results for demonstration purposes. 
